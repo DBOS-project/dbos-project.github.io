@@ -1,37 +1,45 @@
 ## DBOS
 
-You can use the [editor on GitHub](https://github.com/DBOS-project/project-page/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This project is building a completely new operating system (OS) stack. Rather than build on a single node OS together with separate cluster schedulers, distributed filesystems, and network managers, we argue that a distributed transactional DBMS should be the basis for a scalable cluster OS.
+We have shown that such a database OS (DBOS) can do scheduling, file management, and inter-process communication with competitive performance to existing systems. 
+In addition, significantly better analytics can be provided as well as a dramatic reduction in code complexity through implementing OS services as standard database queries, while implementing low-latency transactions and high availability only once.
+Our future plan is to build a complete end-to-end prototype of DBOS.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The DBOS project is a collaboration between MIT, Stanford, CMU, MIT Lincoln Lab, VMware, and Google.
 
-### Markdown
+### Publications
+- [DBOS: A Proposal for a Data-Centric Operating System](https://arxiv.org/abs/2007.11112) (arXiv)
+- [Data Governance in a Database Operating System (DBOS)](https://link.springer.com/chapter/10.1007/978-3-030-93663-1_4) (Poly'21, co-located with VLDB 2021)
+- [DBOS: A DBMS-Oriented Operating System](https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf) (VLDB 2022)
+- [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### People
 
-```markdown
-Syntax highlighted code block
+#### Faculty
+- Michael Cafarella (MIT)
+- Christos Kozyrakis (Stanford)
+- Michael Stonebraker (MIT)
+- Matei Zaharia (Stanford)
 
-# Header 1
-## Header 2
-### Header 3
+#### Students
+- Qian Li (Stanford)
+- Peter Kraft (Stanford)
+- Kostis Kaffes (Stanford)
+- Athinagoras Skiadopoulos (Stanford)
+- Jason Li (MIT)
+- Robert Redmond (MIT)
+- Nathan Weckwerth (MIT)
+- Brian Xia (MIT)
+- Danny Cho (Stanford)
 
-- Bulleted
-- List
+#### Industry & Research Labs
+- Goetz Graefe (Google)
+- Jeremy Kepner (MIT Lincoln Lab)
+- Lalith Suresh (VMware)
 
-1. Numbered
-2. List
+#### Alumni
+- Shana Mathew (MIT)
+- Daniel Hong (MIT)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DBOS-project/project-page/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Sponsors
+- Google
