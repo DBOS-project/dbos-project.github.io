@@ -10,12 +10,7 @@ We are currently working on building a complete end-to-end prototype of DBOS.
 The DBOS project includes members from MIT, Stanford, CMU, Google, and VMware.
 
 ## Publications
-[A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
-<details>
-  <summary style="color:#541D8B">abstract</summary>
-  <p>Over the last year, a group of us at MIT, Stanford, CMU, Google, and VMware have been designing and implementing a new Operating System (OS) stack for modern hyperscale datacenter environments.  This new stack leverages a set of multi-core, multi-node distributed DBMSs near the bottom of the stack to manage a cluster of machines on a public or private cloud. In this paper, we briefly review the rationale for a new OS, present our resulting architecture, and review our progress to date. The meat of our paper is a presentation of the main lessons thus far from this project. Many of these have to do with missing capabilities in multi-node DBMSs that form the guts of our proposal. Finally, we present future research directions in database-oriented operating systems.</p>
-</details>
-
+- [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
 - [DBOS: A DBMS-Oriented Operating System](https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf) (VLDB 2022)
 - [Data Governance in a Database Operating System (DBOS)](https://link.springer.com/chapter/10.1007/978-3-030-93663-1_4) (Poly'21, co-located with VLDB 2021)
 - [DBOS: A Proposal for a Data-Centric Operating System](https://arxiv.org/abs/2007.11112) (arXiv)
