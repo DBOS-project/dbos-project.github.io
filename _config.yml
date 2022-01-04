@@ -1,3 +1,4 @@
 title: DBOS
 description: A Database-oriented Operating System
 theme: jekyll-theme-tactile
+markdown: kramdown
