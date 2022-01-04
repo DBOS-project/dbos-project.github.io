@@ -30,15 +30,15 @@ The DBOS project includes members from MIT, Stanford, CMU, Google, and VMWare.
 - [Kostis Kaffes](http://stanford.edu/~kkaffes/) (Stanford)
 - [Peter Kraft](https://petereliaskraft.net/) (Stanford)
 - [Qian Li](https://cs.stanford.edu/people/qianli/) (Stanford)
-- Athinagoras Skiadopoulos (Stanford)
+- [Athinagoras Skiadopoulos](?) (Stanford)
 
 #### Masters and Undergraduate Students
-- Danny Cho (Stanford)
-- Jason Li (MIT)
-- Deeptaanshu Kumar (CMU)
-- Robert Redmond (MIT)
-- Brian Xia (MIT)
-- Nathan Weckwerth (MIT)
+- [Danny Cho](?) (Stanford)
+- [Deeptaanshu Kumar](?) (CMU)
+- [Jason Li](?) (MIT)
+- [Robert Redmond](?) (MIT)
+- [Nathan Weckwerth](?) (MIT)
+- [Brian Xia](?) (MIT)
 
 #### Alumni
 - Shana Mathew (MIT)
