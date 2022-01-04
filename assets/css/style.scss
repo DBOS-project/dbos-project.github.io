@@ -1,0 +1,15 @@
+---
+---
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #6d6d6d;
+  text-shadow: none;
+}
+
+p {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+@import "{{ site.theme }}";
