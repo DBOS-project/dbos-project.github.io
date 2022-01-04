@@ -1,4 +1,4 @@
-## DBOS
+## Overview
 The goal of DBOS--the DBMS-oriented Operating System--is to build a completely new operating system (OS) stack for distributed systems.
 Currently, distributed systems are built on many instances of a single-node OS like Linux with entirely separate cluster schedulers, distributed file systems, and network managers.
 We argue that we should instead use a distributed transactional DBMS as the basis for a scalable cluster OS.
@@ -7,13 +7,14 @@ It can additionally provide significantly better analytics and dramatically redu
 while implementing low-latency transactions and high availability only once.
 We are currently working on building a complete end-to-end prototype of DBOS.
 
-The DBOS project includes members from MIT, Stanford, CMU, Google, and VMWare.
+The DBOS project includes members from MIT, Stanford, CMU, Google, and VMware.
 
 ## Publications
-- [DBOS: A Proposal for a Data-Centric Operating System](https://arxiv.org/abs/2007.11112) (arXiv)
-- [Data Governance in a Database Operating System (DBOS)](https://link.springer.com/chapter/10.1007/978-3-030-93663-1_4) (Poly'21, co-located with VLDB 2021)
-- [DBOS: A DBMS-Oriented Operating System](https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf) (VLDB 2022)
 - [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
+- [DBOS: A DBMS-Oriented Operating System](https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf) (VLDB 2022)
+- [Data Governance in a Database Operating System (DBOS)](https://link.springer.com/chapter/10.1007/978-3-030-93663-1_4) (Poly'21, co-located with VLDB 2021)
+- [DBOS: A Proposal for a Data-Centric Operating System](https://arxiv.org/abs/2007.11112) (arXiv)
+
 
 ## People
 
