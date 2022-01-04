@@ -41,8 +41,8 @@ The DBOS project includes members from MIT, Stanford, CMU, Google, and VMWare.
 - [Brian Xia](?) (MIT)
 
 #### Alumni
-- Shana Mathew (MIT)
-- Daniel Hong (MIT)
+- [Daniel Hong](?) (MIT)
+- [Shana Mathew](?) (MIT)
 
 ## Sponsors
 - ???
