@@ -7,7 +7,7 @@ It can additionally provide significantly better analytics and dramatically redu
 while implementing low-latency transactions and high availability only once.
 We are currently working on building a complete end-to-end prototype of DBOS.
 
-The DBOS project includes members from MIT, Stanford, CMU, Google, and VMware.
+The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, and BCG.
 
 ## Publications
 - [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
@@ -20,11 +20,13 @@ The DBOS project includes members from MIT, Stanford, CMU, Google, and VMware.
 
 #### Faculty and Senior Industry Partners
 - [Michael Cafarella](https://www.csail.mit.edu/person/michael-cafarella) (MIT)
+- [Michael Coden](https://www.bcg.com/about/people/experts/michael-coden) (BCG)
 - [Goetz Graefe](https://research.google/people/105119/) (Google)
 - [Jeremy Kepner](http://www.mit.edu/~kepner/) (MIT)
 - [Christos Kozyrakis](https://web.stanford.edu/~kozyraki/) (Stanford)
 - [Michael Stonebraker](https://www.csail.mit.edu/person/michael-stonebraker) (MIT)
 - [Lalith Suresh](https://research.vmware.com/researchers/lalith-suresh) (VMware)
+- [Xiangyao Yu](http://pages.cs.wisc.edu/~yxy/) (UW-Madison)
 - [Matei Zaharia](https://cs.stanford.edu/~matei/) (Stanford)
 
 #### PhD Students
@@ -46,4 +48,5 @@ The DBOS project includes members from MIT, Stanford, CMU, Google, and VMware.
 - [Shana Mathew](?) (MIT)
 
 ## Sponsors
-- ???
+- [Google](https://research.google/)
+- [VMware](https://www.vmware.com/)
