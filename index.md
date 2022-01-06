@@ -34,6 +34,7 @@ The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, V
 - [Peter Kraft](https://petereliaskraft.net/) (Stanford)
 - [Qian Li](https://cs.stanford.edu/people/qianli/) (Stanford)
 - [Athinagoras Skiadopoulos](?) (Stanford)
+- [Xinjing Zhou](https://zxjcarrot.github.io/) (MIT)
 
 #### Masters and Undergraduate Students
 - [Danny Cho](?) (Stanford)
