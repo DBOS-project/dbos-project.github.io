@@ -38,7 +38,7 @@ The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, V
 
 #### Masters and Undergraduate Students
 - [Danny Cho](?) (Stanford)
-- [Deeptaanshu Kumar](?) (CMU)
+- [Deeptaanshu Kumar](https://www.deeptaanshu.com) (CMU)
 - [Jason Li](?) (MIT)
 - [Robert Redmond](?) (MIT)
 - [Nathan Weckwerth](?) (MIT)
