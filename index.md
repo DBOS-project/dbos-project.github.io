@@ -13,7 +13,8 @@ The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, V
 - [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
 - [DBOS: A DBMS-Oriented Operating System](https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf) (VLDB 2022)
 - [Data Governance in a Database Operating System (DBOS)](https://link.springer.com/chapter/10.1007/978-3-030-93663-1_4) (Poly'21, co-located with VLDB 2021)
-- [DBOS: A Proposal for a Data-Centric Operating System](https://arxiv.org/abs/2007.11112) (arXiv)
+- [DBOS: A Proposal for a Data-Centric Operating System](https://arxiv.org/abs/2007.11112) (arXiv 2020)
+- [TabulaROSA: Tabular Operating System Architecture for Massively Parallel Heterogeneous Compute Engines](https://ieeexplore.ieee.org/document/8547577) (HPEC 2018)
 
 
 ## People
