@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.dbos.apiary.client"},{"l":"org.dbos.apiary.connection"},{"l":"org.dbos.apiary.function"},{"l":"org.dbos.apiary.postgres"},{"l":"org.dbos.apiary.voltdb"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.dbos.apiary.client"},{"l":"org.dbos.apiary.function"},{"l":"org.dbos.apiary.postgres"},{"l":"org.dbos.apiary.voltdb"}];updateSearchResults();
