@@ -10,6 +10,9 @@ We are currently working on building a complete end-to-end prototype of DBOS.
 The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, and BCG.
 
 ## Publications
+- [Machine Learning with DBOS](https://sites.google.com/view/aidb2022/home) (AIDB@VLDB 2022)
+- [Lotus: Scalable Multi-Partition Transactions on Single-Threaded
+Partitioned Databases](http://vldb.org/2022/?papers-research) (VLDB 2022)
 - [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
 - [DBOS: A DBMS-Oriented Operating System](https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf) (VLDB 2022)
 - [Data Governance in a Database Operating System (DBOS)](https://link.springer.com/chapter/10.1007/978-3-030-93663-1_4) (Poly'21, co-located with VLDB 2021)
@@ -31,21 +34,21 @@ The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, V
 - [Matei Zaharia](https://cs.stanford.edu/~matei/) (Stanford)
 
 #### PhD Students
-- [Kostis Kaffes](http://stanford.edu/~kkaffes/) (Stanford)
 - [Peter Kraft](https://petereliaskraft.net/) (Stanford)
 - [Qian Li](https://cs.stanford.edu/people/qianli/) (Stanford)
 - [Athinagoras Skiadopoulos](?) (Stanford)
 - [Xinjing Zhou](https://zxjcarrot.github.io/) (MIT)
 
 #### Masters and Undergraduate Students
-- [Danny Cho](?) (Stanford)
 - [Deeptaanshu Kumar](https://www.deeptaanshu.com) (CMU)
 - [Jason Li](?) (MIT)
+
+#### Alumni
+- [Kostis Kaffes](http://stanford.edu/~kkaffes/) (Stanford)
+- [Danny Cho](?) (Stanford)
 - [Robert Redmond](?) (MIT)
 - [Nathan Weckwerth](?) (MIT)
 - [Brian Xia](?) (MIT)
-
-#### Alumni
 - [Daniel Hong](?) (MIT)
 - [Shana Mathew](?) (MIT)
 
