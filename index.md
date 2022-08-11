@@ -10,7 +10,7 @@ We are currently working on building a complete end-to-end prototype of DBOS.
 The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, and BCG.
 
 ## Publications
-- [Machine Learning with DBOS](https://sites.google.com/view/aidb2022/home) (AIDB@VLDB 2022)
+- [Machine Learning with DBOS](http://arxiv.org/abs/2208.05101) (AIDB@VLDB 2022)
 - [Lotus: Scalable Multi-Partition Transactions on Single-Threaded
 Partitioned Databases](http://vldb.org/2022/?papers-research) (VLDB 2022)
 - [A Progress Report on DBOS: A DBMS-Oriented Operating System](http://cidrdb.org/cidr2022/papers/p26-li.pdf) (CIDR 2022)
