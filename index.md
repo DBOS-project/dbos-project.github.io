@@ -7,7 +7,7 @@ It can additionally provide significantly better analytics and dramatically redu
 while implementing low-latency transactions and high availability only once.
 We are currently working on building a complete end-to-end prototype of DBOS.
 
-The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, and BCG.
+The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, BCG, and Sigma Computing.
 
 ## Publications
 - [Machine Learning with DBOS](http://arxiv.org/abs/2208.05101) (AIDB@VLDB 2022)
@@ -25,6 +25,7 @@ Partitioned Databases](http://vldb.org/2022/?papers-research) (VLDB 2022)
 #### Faculty and Senior Industry Partners
 - [Michael Cafarella](https://www.csail.mit.edu/person/michael-cafarella) (MIT)
 - [Michael Coden](https://www.bcg.com/about/people/experts/michael-coden) (BCG)
+- [Çağatay Demiralp](http://hci.stanford.edu/~cagatay/) (Sigma Computing)
 - [Goetz Graefe](https://research.google/people/105119/) (Google)
 - [Jeremy Kepner](http://www.mit.edu/~kepner/) (MIT)
 - [Christos Kozyrakis](https://web.stanford.edu/~kozyraki/) (Stanford)
