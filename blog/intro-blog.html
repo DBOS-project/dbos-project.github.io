@@ -52,10 +52,10 @@
                             witnessed the rise of the cloud,
                             and began to appreciate the critical importance of security and data governance.
                             Using powerful new tools like Spark and Kubernetes, we've adapted to the ever-growing scale of computing,
-                            but these introduce a great deal of <a href=http://www.cs.unc.edu/techreports/86-020.pdf>accidental complexity</a>
+                            but these introduce a great deal of <a href=http://www.cs.unc.edu/techreports/86-020.pdf target="_blank">accidental complexity</a>
                             into even basic operations.
-                            And so, we--<a href="https://dbos-project.github.io">a team of almost twenty people at Stanford, MIT, UW-Madison, Google, VMWare, and other institutions</a>--
-                            are trying to build a better way.
+                            And so, we--<a href="https://dbos-project.github.io" target="_blank">a team of almost twenty people at Stanford, MIT, UW-Madison, Google, VMWare, and other institutions</a>--
+                            are drastically rethinking the way we should build distributed systems and applications.
                             We're proposing a database-oriented operating system (DBOS): an idea for a new generation of operating systems that
                             natively support large-scale distributed applications in the cloud.
                             </p>
@@ -101,8 +101,8 @@
 
                         	<p>
                         	We have been working on DBOS for over a year and have prototyped it in two phases.
-                        	In the first phase, discussed in papers published in <a href="https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf">VLDB</a>
-                        	and <a href="https://www.cidrdb.org/cidr2022/papers/p26-li.pdf">CIDR</a>,
+                        	In the first phase, discussed in papers published in <a href="https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf" target="_blank">VLDB'22</a>
+                        	and <a href="https://www.cidrdb.org/cidr2022/papers/p26-li.pdf" target="_blank">CIDR'22</a>,
                         	we prototyped proof-of-concept DBMS-oriented implementations of OS services such as a file system, scheduler, and IPC subsystem,
                         	demonstrating they were practical.
                         	In the second phase, discussed in an arXiv paper currently undergoing peer review,
@@ -113,7 +113,7 @@
                         	<p>
                         	Our prototypes have convinced us that DBOS is practical, so we are now planning the next phase of the project:
                         	implementing a complete database-oriented development stack for distributed applications.
-                        	To make this possible, we're going to have to solve several major challenges.
+                        	To make this possible, we have to solve several major challenges.
                         	The most pressing is the question of what database to use.
                             Based on our experiences building our prototypes, we believe that only a distributed in-memory database can give us the scalability and performance we need.
                             However, DBOS requires many features that existing such databases lack,
@@ -124,10 +124,10 @@
                         	<ul>
                                 <li>Better tradeoffs between local and distributed transactions in a distributed database,
                                 	leveraging cutting-edge research on high-performance distributed transactions
-                                	<a href="https://dl.acm.org/doi/10.14778/3551793.3551843">(Work published in VLDB)</a>.</li>
+                                	<a href="https://dl.acm.org/doi/10.14778/3551793.3551843" target="_blank">(our Lotus work, published in VLDB'22)</a>.</li>
                                 <li>Better ways to support multiple data stores and data models in the DBOS backend, enabling operations like analytics and file I/O for which traditional databases are inefficient.</li>
                                 <li>New infrastructure leveraging data provenance to make debugging distributed applications easier.</li>
-                                <li>Better support for larger-than-memory datasets in in-memory databases, building on prior work from members of our team such as <a href="https://www.vldb.org/pvldb/vol6/p1942-debrabant.pdf">anti-caching</a>.</li>
+                                <li>Better support for larger-than-memory datasets in in-memory databases, building on prior work from members of our team such as <a href="https://www.vldb.org/pvldb/vol6/p1942-debrabant.pdf" target="_blank">anti-caching</a>.</li>
                                 <li>More efficient auto-scaling and resource management in distributed in-memory databases</li>
                             </ul>
 
@@ -149,16 +149,16 @@
 
                             <div class="entry-author meta-blk">
                                 <div class="author-avatar">
-                                    <a href="https://petereliaskraft.net"><img class="avatar" src="../images/PK_headshot.jpg" alt=""></a>
+                                    <a href="https://petereliaskraft.net" target="_blank"><img class="avatar" src="../images/PK_headshot.jpg" alt=""></a>
                                 </div>
                                 <div class="author-avatar">
-                                    <a href="https://cs.stanford.edu/people/qianli/"><img class="avatar" src="../images/qian.jpg" alt=""></a>
+                                    <a href="https://cs.stanford.edu/people/qianli/" target="_blank"><img class="avatar" src="../images/qian.jpg" alt=""></a>
                                 </div>
                                 <div class="byline">
                                     <span>By</span>
-                                    <a href="https://petereliaskraft.net">Peter Kraft</a>
+                                    <a href="https://petereliaskraft.net" target="_blank">Peter Kraft</a>
                                     and
-                                    <a href="https://cs.stanford.edu/people/qianli/">Qian Li</a>
+                                    <a href="https://cs.stanford.edu/people/qianli/" target="_blank">Qian Li</a>
                                 </div>
                             </div>
 
@@ -188,8 +188,8 @@
             <div class="row">
                 <div class="column">
                     <div class="ss-copyright">
-                        <span>By <a href="https://petereliaskraft.net">Peter Kraft</a> and <a href="https://cs.stanford.edu/people/qianli/">Qian Li</a></span> 
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        <span>By <a href="https://petereliaskraft.net" target="_blank">Peter Kraft</a> and <a href="https://cs.stanford.edu/people/qianli/" target="_blank">Qian Li</a></span> 
+                        <span>Design by <a href="https://www.styleshout.com/" target="_blank">StyleShout</a></span>
                     </div> <!-- end ss-copyright -->
                 </div>
             </div> 
