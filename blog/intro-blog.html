@@ -92,33 +92,33 @@
                             <p>
                             At Level 1, a kernel provides low-level OS services such as device drivers and memory management.
                             At Level 2, a distributed DBMS runs on those services.
-                            At Level 3, we build high-level OS services such as a distributed file system, scheduler, and inter-process communication (IPC) subsystem on top of the DBMS
-                            following the DBOS principles outlined above.
+                            At Level 3, we build high-level OS services such as a distributed file system, scheduler, and inter-process communication (IPC) subsystem on top of the DBMS.
                             At Level 4, users write applications.  We hope to support the high-level languages and frameworks people use today, but interfacing with DBOS services
                             instead of making Linux system calls or depending on a cluster manager like Kubernetes.
+                            We believe that by implementing DBMS-oriented abstractions for distributed operations like cluster scheduling or message passing in the OS,
+                            we can simplify building distributed applications.
                         	</p>
 
                         	<p>
                         	We have been working on DBOS for over a year and have prototyped it in two phases.
                         	In the first phase, discussed in papers published in <a href="https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf">VLDB</a>
                         	and <a href="https://www.cidrdb.org/cidr2022/papers/p26-li.pdf">CIDR</a>,
-                        	we protoyped proof-of-concept DBMS-oriented implementations of OS services such as a file system, scheduler, and IPC subsystem,
+                        	we prototyped proof-of-concept DBMS-oriented implementations of OS services such as a file system, scheduler, and IPC subsystem,
                         	demonstrating they were practical.
                         	In the second phase, discussed in an arXiv paper currently undergoing peer review,
-                        	we implemented a programmable environment based on DBOS principles: a function-as-a-service (FaaS) platform we call Apiary,
-                        	showing it could be used to build user applications at scale.
+                        	we implemented a programmable environment based on DBOS principles, a function-as-a-service (FaaS) platform we call Apiary,
+                            and showed it could run user applications at scale.
                         	</p>
 
                         	<p>
-                        	Our prototypes have convinced us that DBOS is practical, so we are now planning to build it for real,
-                        	implementing a complete DBMS-oriented development stack for distributed applications.
-                        	To make DBOS possible, we're going to have to solve several major challenges.
-                        	The most pressing is the question of what database we will use.
-                        	In our prevous prototypes, we achieved high performance with the incredibly fast distributed in-memory database
-                        	<a href="https://www.voltactivedata.com/">VoltDB</a>.
-                        	We believe that only a distributed in-memory database can give us the scalability and performance we need,
-                        	but DBOS requires many features that existing databases lack, so we are currently researching how to implement them.
-                        	These include:
+                        	Our prototypes have convinced us that DBOS is practical, so we are now planning the next phase of the project:
+                        	implementing a complete database-oriented development stack for distributed applications.
+                        	To make this possible, we're going to have to solve several major challenges.
+                        	The most pressing is the question of what database to use.
+                            Based on our experiences building our prototypes, we believe that only a distributed in-memory database can give us the scalability and performance we need.
+                            However, DBOS requires many features that existing such databases lack,
+                            so we are currently researching how to implement them;
+                            goals of our ongoing projects include:
                         	</p>
 
                         	<ul>
