@@ -46,16 +46,15 @@
                         <div class="s-content__entry-content">
 
                             <p>
-                            Today, almost all of us use operating systems such as Linux which are more than thirty years old,
-                            even though the world of computing has changed a lot since they were built.
-                            We've seen the amount of state and data applications manage grow by an order of magnitude,
-                            witnessed the rise of the cloud,
-                            and began to appreciate the critical importance of security and data governance.
-                            Using powerful new tools like Spark and Kubernetes, we've adapted to the ever-growing scale of computing,
+                            Today, most people develop on operating systems such as Linux which are more than thirty years old,
+                            even though computing has changed a lot since they were built.
+                            Since then, the amount of state and data applications manage has grown by an order of magnitude,
+                            many applications have moved to the cloud,
+                            and the world has woken up to the critical importance of security and data governance.
+                            Using powerful tools like Spark and Kubernetes, developers have adapted to the ever-growing scale of computing,
                             but these introduce a great deal of <a href=http://www.cs.unc.edu/techreports/86-020.pdf target="_blank">accidental complexity</a>
                             into even basic operations.
-                            And so, we--<a href="https://dbos-project.github.io" target="_blank">a team of almost twenty people at Stanford, MIT, UW-Madison, Google, VMWare, and other institutions</a>--
-                            are drastically rethinking the way we should build distributed systems and applications.
+                            To make developing at scale easier, we&mdash;<a href="https://dbos-project.github.io" target="_blank">a team of almost twenty people at Stanford, MIT, UW-Madison, Google, VMWare, and other institutions</a>&mdash;are drastically rethinking the way people build distributed applications.
                             We're proposing a database-oriented operating system (DBOS): an idea for a new generation of operating systems that
                             natively support large-scale distributed applications in the cloud.
                             </p>
@@ -63,8 +62,8 @@
                             <p>
                             We believe the next generation of operating systems should be database-oriented because databases 
                             are built to solve the hard problems of modern computing.
-                            Databases today can manage petabytes of data and are distributed and increasingly cloud-native.
-                            To leverage these capabilities, a database-oriented operating system should be built around two principles:
+                            Databases today can manage petabytes of data, are distributed and increasingly cloud-native, and can secure and govern data with fine-grained access control and provenance tracking.
+                            To leverage these capabilities, we propose building a database-oriented operating system around two principles:
                             </p>
 
                             <ol>
@@ -75,7 +74,7 @@
                             <p>
                             We see two major advantages to adopting these principles.
                             First, many critical properties, such as atomicity, durability, availability, and consistency can be implemented
-                            once in the DBMS and automatically inherited by the OS and by applications, simplify building applications at scale.
+                            once in the DBMS and automatically inherited by the OS and by applications, simplifying building applications at scale.
                             Second, we can use powerful database provenance and logging capabilities to track accesses and updates to application state,
                             simplifying analyzing, monitoring, debugging, and securing applications at scale.
                             </p>
@@ -117,8 +116,8 @@
                         	The most pressing is the question of what database to use.
                             Based on our experiences building our prototypes, we believe that only a distributed in-memory database can give us the scalability and performance we need.
                             However, DBOS requires many features that existing such databases lack,
-                            so we are currently researching how to implement them;
-                            goals of our ongoing projects include:
+                            so we are must figure out how to implement them.
+                            Members of our team are currently researching:
                         	</p>
 
                         	<ul>
@@ -135,7 +134,7 @@
 
                             <ul>
                             	<li>Which OS services should be implemented below the DBMS (i.e., in the kernel) and which should be programmed on top of it in a database-oriented manner?</li>
-                            	<li>What programming interface should DBOS provide?  Should it be function-as-a-service like our Apiary prototype, or something else entirely?
+                            	<li>What programming interface should DBOS provide?  Should it have a function-as-a-service programming model like our Apiary prototype, or something else entirely?
                             </ul>
 
                             We're incredibly excited about DBOS and have come a long way, but there's still a long way to go.
