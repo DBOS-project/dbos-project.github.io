@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>DBOS: A Database-Oriented Operating System</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+
+   <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../favicon.png" >
+
+</head>
+
+<body id="top">
+
+
+    <!-- content
+    ================================================== -->
+    <section class="s-content">
+
+        <div class="row">
+            <div class="column large-12">
+
+                <article class="s-content__entry format-standard">
+
+                    <div class="s-content__entry-header">
+                        <h1 class="s-content__title s-content__title--post">DBOS: A Database-Oriented<br> Operating System</h1>
+                    </div> <!-- end s-content__entry-header -->
+
+                    <div class="s-content__primary">
+
+                        <div class="s-content__entry-content">
+
+                            <p>
+                            Today, almost all of us use operating systems such as Linux which are more than thirty years old,
+                            even though the world of computing has changed a lot since they were built.
+                            We've seen the amount of state and data applications manage grow by an order of magnitude,
+                            witnessed the rise of the cloud,
+                            and began to appreciate the critical importance of security and data governance.
+                            Using powerful new tools like Spark and Kubernetes, we've adapted to the ever-growing scale of computing,
+                            but these introduce a great deal of <a href=http://www.cs.unc.edu/techreports/86-020.pdf>accidental complexity</a>
+                            into even basic operations.
+                            And so, we--<a href="https://dbos-project.github.io">a team of almost twenty people at Stanford, MIT, UW-Madison, Google, VMWare, and other institutions</a>--
+                            are trying to build a better way.
+                            We're proposing a database-oriented operating system (DBOS): an idea for a new generation of operating systems that
+                            natively support large-scale distributed applications in the cloud.
+                            </p>
+
+                            <p>
+                            We believe the next generation of operating systems should be database-oriented because databases 
+                            are built to solve the hard problems of modern computing.
+                            Databases today can manage petabytes of data and are distributed and increasingly cloud-native.
+                            To leverage these capabilities, a database-oriented operating system should be built around two principles:
+                            </p>
+
+                            <ol>
+                                <li>Store all application and OS state in tables in a distributed database.</li>
+                                <li>Access state only through database transactions</li>
+                            </ol>
+
+                            <p>
+                            We see two major advantages to adopting these principles.
+                            First, many critical properties, such as atomicity, durability, availability, and consistency can be implemented
+                            once in the DBMS and automatically inherited by the OS and by applications, simplify building applications at scale.
+                            Second, we can use powerful database provenance and logging capabilities to track accesses and updates to application state,
+                            simplifying analyzing, monitoring, debugging, and securing applications at scale.
+                            </p>
+
+                            <p>
+                            Our proposal for DBOS follows a four-level architecture:
+                            </p>
+
+                            <p>
+                                <img src="../images/dbos_diagram.png" 
+                                         sizes="(max-width: 2100px) 100vw, 2100px" alt="">
+                            </p>
+
+                            <p>
+                            At Level 1, a kernel provides low-level OS services such as device drivers and memory management.
+                            At Level 2, a distributed DBMS runs on those services.
+                            At Level 3, we build high-level OS services such as a distributed file system, scheduler, and inter-process communication (IPC) subsystem on top of the DBMS
+                            following the DBOS principles outlined above.
+                            At Level 4, users write applications.  We hope to support the high-level languages and frameworks people use today, but interfacing with DBOS services
+                            instead of making Linux system calls or depending on a cluster manager like Kubernetes.
+                        	</p>
+
+                        	<p>
+                        	We have been working on DBOS for over a year and have prototyped it in two phases.
+                        	In the first phase, discussed in papers published in <a href="https://vldb.org/pvldb/vol15/p21-skiadopoulos.pdf">VLDB</a>
+                        	and <a href="https://www.cidrdb.org/cidr2022/papers/p26-li.pdf">CIDR</a>,
+                        	we protoyped proof-of-concept DBMS-oriented implementations of OS services such as a file system, scheduler, and IPC subsystem,
+                        	demonstrating they were practical.
+                        	In the second phase, discussed in an arXiv paper currently undergoing peer review,
+                        	we implemented a programmable environment based on DBOS principles: a function-as-a-service (FaaS) platform we call Apiary,
+                        	showing it could be used to build user applications at scale.
+                        	</p>
+
+                        	<p>
+                        	Our prototypes have convinced us that DBOS is practical, so we are now planning to build it for real,
+                        	implementing a complete DBMS-oriented development stack for distributed applications.
+                        	To make DBOS possible, we're going to have to solve several major challenges.
+                        	The most pressing is the question of what database we will use.
+                        	In our prevous prototypes, we achieved high performance with the incredibly fast distributed in-memory database
+                        	<a href="https://www.voltactivedata.com/">VoltDB</a>.
+                        	We believe that only a distributed in-memory database can give us the scalability and performance we need,
+                        	but DBOS requires many features that existing databases lack, so we are currently researching how to implement them.
+                        	These include:
+                        	</p>
+
+                        	<ul>
+                                <li>Better tradeoffs between local and distributed transactions in a distributed database,
+                                	leveraging cutting-edge research on high-performance distributed transactions
+                                	<a href="https://dl.acm.org/doi/10.14778/3551793.3551843">(Work published in VLDB)</a>.</li>
+                                <li>Better ways to support multiple data stores and data models in the DBOS backend, enabling operations like analytics and file I/O for which traditional databases are inefficient.</li>
+                                <li>New infrastructure leveraging data provenance to make debugging distributed applications easier.</li>
+                                <li>Better support for larger-than-memory datasets in in-memory databases, building on prior work from members of our team such as <a href="https://www.vldb.org/pvldb/vol6/p1942-debrabant.pdf">anti-caching</a>.</li>
+                                <li>More efficient auto-scaling and resource management in distributed in-memory databases</li>
+                            </ul>
+
+                            We're also still thinking through some core systems design questions, most notably:
+
+                            <ul>
+                            	<li>Which OS services should be implemented below the DBMS (i.e., in the kernel) and which should be programmed on top of it in a database-oriented manner?</li>
+                            	<li>What programming interface should DBOS provide?  Should it be function-as-a-service like our Apiary prototype, or something else entirely?
+                            </ul>
+
+                            We're incredibly excited about DBOS and have come a long way, but there's still a long way to go.
+                            We're interested in hearing what people have to say about the DBOS idea and about the challenges we've outlined as we figure out how to build this huge system.
+                            Stay tuned for more updates!
+
+                        </div> <!-- end s-entry__entry-content -->
+
+
+                        <div class="s-content__entry-meta">
+
+                            <div class="entry-author meta-blk">
+                                <div class="author-avatar">
+                                    <a href="https://petereliaskraft.net"><img class="avatar" src="../images/PK_headshot.jpg" alt=""></a>
+                                </div>
+                                <div class="author-avatar">
+                                    <a href="https://cs.stanford.edu/people/qianli/"><img class="avatar" src="../images/qian.jpg" alt=""></a>
+                                </div>
+                                <div class="byline">
+                                    <span>By</span>
+                                    <a href="https://petereliaskraft.net">Peter Kraft</a>
+                                    and
+                                    <a href="https://cs.stanford.edu/people/qianli/">Qian Li</a>
+                                </div>
+                            </div>
+
+                            <div class="meta-bottom">
+                                
+                                <div class="entry-cat-links meta-blk">
+
+                                    <span>On</span>
+                                    September 1, 2022
+                                </div>
+
+                            </div>
+
+                        </div> <!-- s-content__entry-meta -->
+
+                    </div> <!-- end s-content__primary -->
+                </article> <!-- end entry -->
+
+            </div> <!-- end column -->
+        </div> <!-- end row -->
+    </section> <!-- end s-content -->
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="column">
+                    <div class="ss-copyright">
+                        <span>By <a href="https://petereliaskraft.net">Peter Kraft</a> and <a href="https://cs.stanford.edu/people/qianli/">Qian Li</a></span> 
+                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                    </div> <!-- end ss-copyright -->
+                </div>
+            </div> 
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+        </div> <!-- end s-footer__bottom -->
+
+   </footer> <!-- end s-footer -->
+</body>
+
+</html>
