@@ -47,8 +47,8 @@
 
                             <p>
                             Today, most people develop on operating systems such as Linux which are more than thirty years old,
-                            even though computing has changed a lot since they were built.
-                            Since then, the amount of state and data applications manage has grown by an order of magnitude,
+                            even though computing has changed a lot in the meantime.
+                            Since Linux was first released in 1991, the amount of state and data applications manage has grown by several orders of magnitude,
                             many applications have moved to the cloud,
                             and the world has woken up to the critical importance of security and data governance.
                             Using powerful tools like Spark and Kubernetes, developers have adapted to the ever-growing scale of computing,
@@ -73,10 +73,10 @@
 
                             <p>
                             We see two major advantages to adopting these principles.
-                            First, many critical properties, such as atomicity, durability, availability, and consistency can be implemented
+                            First, many critical properties, such as atomicity, durability, availability, and consistency, can be implemented
                             once in the DBMS and automatically inherited by the OS and by applications, simplifying building applications at scale.
                             Second, we can use powerful database provenance and logging capabilities to track accesses and updates to application state,
-                            simplifying analyzing, monitoring, debugging, and securing applications at scale.
+                            simplifying analyzing, monitoring, debugging, and securing applications.
                             </p>
 
                             <p>
@@ -91,7 +91,7 @@
                             <p>
                             At Level 1, a kernel provides low-level OS services such as device drivers and memory management.
                             At Level 2, a distributed DBMS runs on those services.
-                            At Level 3, we build high-level OS services such as a distributed file system, scheduler, and inter-process communication (IPC) subsystem on top of the DBMS.
+                            At Level 3, we build high-level OS services such as a distributed file system, cluster scheduler, and distributed inter-process communication (IPC) subsystem on top of the DBMS.
                             At Level 4, users write applications.  We hope to support the high-level languages and frameworks people use today, but interfacing with DBOS services
                             instead of making Linux system calls or depending on a cluster manager like Kubernetes.
                             We believe that by implementing DBMS-oriented abstractions for distributed operations like cluster scheduling or message passing in the OS,
@@ -134,11 +134,11 @@
 
                             <ul>
                             	<li>Which OS services should be implemented below the DBMS (i.e., in the kernel) and which should be programmed on top of it in a database-oriented manner?</li>
-                            	<li>What programming interface should DBOS provide?  Should it have a function-as-a-service programming model like our Apiary prototype, or something else entirely?
+                            	<li>What programming interface should DBOS provide?  Should it have a function-as-a-service programming model like our Apiary prototype or something else entirely?
                             </ul>
 
                             We're incredibly excited about DBOS and have come a long way, but there's still a long way to go.
-                            We're interested in hearing what people have to say about the DBOS idea and about the challenges we've outlined as we figure out how to build this huge system.
+                            We're interested in any feedback people can provide about the DBOS ideas and the challenges we've outlined as we figure out how to build this huge system.
                             Stay tuned for more updates!
 
                         </div> <!-- end s-entry__entry-content -->
