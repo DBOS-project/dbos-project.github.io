@@ -48,7 +48,7 @@
                             <p>
                             Today, most people develop on operating systems such as Linux which are more than thirty years old,
                             even though computing has changed a lot in the meantime.
-                            Since Linux was first released in 1991, the amount of state and data applications manage has grown by several orders of magnitude,
+                            Since Linux was first released in 1991, the size of application state and data has grown by several orders of magnitude,
                             many applications have moved to the cloud,
                             and the world has woken up to the critical importance of security and data governance.
                             Using powerful tools like Spark and Kubernetes, developers have adapted to the ever-growing scale of computing,
@@ -70,20 +70,18 @@
 
                             <ol>
                                 <li>Store all application and OS state in tables in a distributed database.</li>
-                                <li>Access state only through database transactions</li>
+                                <li>Access state only through database transactions.</li>
                             </ol>
 
                             <p>
                             We see two major advantages to adopting these principles.
                             First, many critical properties, such as atomicity, durability, availability, and consistency, can be implemented
                             once in the DBMS and automatically inherited by the OS and by applications, simplifying building applications at scale.
-                            For example, a cluster scheduler could store information on tasks and workers in database tables and implement scheduling operations
-                            as database transactions that mix imperative code and SQL. A scheduler built this way naturally avoids consistency and atomicity issues
-                            involving shared task and worker state because accesses are transactional and is easy to make fault-tolerant because
-                            the database guarantees its state will be available and consistent after a failure.
+                            For example, a cluster scheduler could store information on tasks and workers in database tables and implement scheduling operations as database transactions that mix imperative code and SQL. 
+                            A scheduler built this way can use database transactions to manage concurrent access to shared worker and task state, and rely on database consistency and durability guarantees to recover easily from failure.
                             Second, we can use powerful database provenance and logging capabilities to track accesses and updates to application state,
                             simplifying analyzing, monitoring, debugging, and securing applications.
-                            For example, if we believe some private data was accessed inappropriately, we can write a SQL query to find all
+                            For example, if we discover some private data was accessed inappropriately, we can investigate if that data was exfiltrated by writing a SQL query to find all
                             operations done by processes that earlier accessed that private data.
                             </p>
 
@@ -112,8 +110,8 @@
                         	and <a href="https://www.cidrdb.org/cidr2022/papers/p26-li.pdf" target="_blank">CIDR'22</a>,
                         	we prototyped proof-of-concept DBMS-oriented implementations of OS services such as a file system, scheduler, and IPC subsystem,
                         	demonstrating they were practical.
-                        	In the second phase, discussed in an arXiv paper currently undergoing peer review,
-                        	we implemented a programmable environment based on DBOS principles, a function-as-a-service (FaaS) platform we call Apiary,
+                        	In the second phase, discussed in an <a href="https://arxiv.org" target="_blank">arXiv paper</a> currently undergoing peer review,
+                        	we built a programmable environment based on DBOS principles, implementing a function-as-a-service (FaaS) interface,
                             and showed it could run user applications at scale.
                         	</p>
 
@@ -135,14 +133,14 @@
                                 <li>Better ways to support multiple data stores and data models in the DBOS backend, enabling operations like analytics and file I/O for which traditional databases are inefficient.</li>
                                 <li>New infrastructure leveraging data provenance to make debugging distributed applications easier.</li>
                                 <li>Better support for larger-than-memory datasets in in-memory databases, building on prior work from members of our team such as <a href="https://www.vldb.org/pvldb/vol6/p1942-debrabant.pdf" target="_blank">anti-caching</a>.</li>
-                                <li>More efficient auto-scaling and resource management in distributed in-memory databases</li>
+                                <li>More efficient auto-scaling and resource management in distributed in-memory databases.</li>
                             </ul>
 
                             We're also still thinking through some core systems design questions, most notably:
 
                             <ul>
                             	<li>Which OS services should be implemented below the DBMS (i.e., in the kernel) and which should be programmed on top of it in a database-oriented manner?</li>
-                            	<li>What programming interface should DBOS provide?  Should it have a function-as-a-service programming model like our Apiary prototype or something else entirely?
+                            	<li>What programming interface should DBOS provide?  Should it have a function-as-a-service programming model like our prototype or something else?
                             </ul>
 
                             We're incredibly excited about DBOS and have come a long way, but there's still a long way to go.
