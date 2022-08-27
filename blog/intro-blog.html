@@ -55,7 +55,7 @@
                             but these introduce a great deal of <a href=http://www.cs.unc.edu/techreports/86-020.pdf target="_blank">accidental complexity</a>
                             into even basic operations.
                             To make developing at scale easier, we&mdash;<a href="https://dbos-project.github.io" target="_blank">a team of almost twenty people at Stanford, MIT, UW-Madison, Google, VMWare, and other institutions</a>&mdash;are drastically rethinking the way people build distributed applications.
-                            We're proposing a database-oriented operating system (DBOS): an idea for a new generation of operating systems that
+                            We're proposing a <b>database-oriented operating system (DBOS)</b>: an idea for a new generation of operating systems that
                             natively support large-scale distributed applications in the cloud.
                             </p>
 
@@ -74,11 +74,11 @@
                             </ol>
 
                             <p>
-                            We see two major advantages to adopting these principles.
+                            We see <b>two major advantages</b> to adopting these principles.
                             First, many critical properties, such as atomicity, durability, availability, and consistency, can be implemented
                             once in the DBMS and automatically inherited by the OS and by applications, simplifying building applications at scale.
                             For example, a cluster scheduler could store information on tasks and workers in database tables and implement scheduling operations as database transactions that mix imperative code and SQL. 
-                            A scheduler built this way can use database transactions to manage concurrent access to shared worker and task state, and rely on database consistency and durability guarantees to recover easily from failure.
+                            This simplifies hard problems like concurrency control and failure recovery: database transactions manage concurrent access to shared worker and task state and guarantee the consistency and durability of scheduler state through failures.
                             Second, we can use powerful database provenance and logging capabilities to track accesses and updates to application state,
                             simplifying analyzing, monitoring, debugging, and securing applications.
                             For example, if we discover some private data was accessed inappropriately, we can investigate if that data was exfiltrated by writing a SQL query to find all
