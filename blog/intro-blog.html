@@ -63,6 +63,8 @@
                             We believe the next generation of operating systems should be database-oriented because databases 
                             are built to solve the hard problems of modern computing.
                             Databases today can manage petabytes of data, are distributed and increasingly cloud-native, and can secure and govern data with fine-grained access control and provenance tracking.
+                            Equally important, modern distributed in-memory data stores like <a href="https://www.voltactivedata.com/" target="_blank">VoltDB</a> and <a href="https://www.foundationdb.org/" target="_blank">FoundationDB</a> are becoming extremely fast,
+                            and we show later they are fast enough to efficiently run many OS services that traditional disk-based RDBMSs could not.
                             To leverage these capabilities, we propose building a database-oriented operating system around two principles:
                             </p>
 
@@ -75,8 +77,14 @@
                             We see two major advantages to adopting these principles.
                             First, many critical properties, such as atomicity, durability, availability, and consistency, can be implemented
                             once in the DBMS and automatically inherited by the OS and by applications, simplifying building applications at scale.
+                            For example, a cluster scheduler could store information on tasks and workers in database tables and implement scheduling operations
+                            as database transactions that mix imperative code and SQL. A scheduler built this way naturally avoids consistency and atomicity issues
+                            involving shared task and worker state because accesses are transactional and is easy to make fault-tolerant because
+                            the database guarantees its state will be available and consistent after a failure.
                             Second, we can use powerful database provenance and logging capabilities to track accesses and updates to application state,
                             simplifying analyzing, monitoring, debugging, and securing applications.
+                            For example, if we believe some private data was accessed inappropriately, we can write a SQL query to find all
+                            operations done by processes that earlier accessed that private data.
                             </p>
 
                             <p>
