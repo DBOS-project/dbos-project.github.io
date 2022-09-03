@@ -12,6 +12,8 @@ We are currently working on building a complete end-to-end prototype of DBOS.
 The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, BCG, and Sigma Computing.
 
 ## Publications
+- [Apiary: A DBMS-Backed Transactional Function-as-a-Service Framework
+](https://arxiv.org/abs/2208.13068) (arXiv preprint)
 - [Machine Learning with DBOS](http://arxiv.org/abs/2208.05101) (AIDB@VLDB 2022)
 - [Lotus: Scalable Multi-Partition Transactions on Single-Threaded
 Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 2022)
