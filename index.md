@@ -11,6 +11,9 @@ We are currently working on building a complete end-to-end prototype of DBOS.
 
 The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, BCG, and Sigma Computing.
 
+## Blog Posts
+- Septermber 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
+
 ## Publications
 - [Apiary: A DBMS-Backed Transactional Function-as-a-Service Framework
 ](https://arxiv.org/abs/2208.13068) (arXiv preprint)
