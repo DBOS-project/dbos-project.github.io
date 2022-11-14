@@ -46,6 +46,7 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 - [Qian Li](https://cs.stanford.edu/people/qianli/) (Stanford)
 - [Athinagoras Skiadopoulos](?) (Stanford)
 - [Xinjing Zhou](https://zxjcarrot.github.io/) (MIT)
+- [Peter Baile Chen](https://peterbaile.github.io/) (MIT)
 
 #### Masters and Undergraduate Students
 - [Deeptaanshu Kumar](https://www.deeptaanshu.com) (CMU)
