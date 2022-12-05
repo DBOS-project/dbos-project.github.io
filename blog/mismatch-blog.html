@@ -63,9 +63,16 @@
                             <p>
                             In terms of reliability, the problem is that developers have to do the hard work of keeping application state consistent.
                             Many applications access multiple data stores and additionally have side effects in external APIs.
-                            For example, a payment service might make a request to the Stripe API, then record the result in Postgres.
-                            In such cases, reliability is really a consistency problem: we must make sure that the Stripe API call completes, and that its result is always recorded in Postgres.
+                            For example, a payment service might make a request to the Stripe API, then record the result in Postgres. In such cases, reliability is really a consistency problem: we must make sure that the Stripe API call completes, and that its result is always recorded in Postgres.
                             To do this, as we show below, we have to appropriately handle many different types of failure: the application could fail, a database call could fail, or a Stripe API call could fail.
+                            </p>
+
+                            <p style="text-align: center;">
+                                <img src="../images/mismatch-blog_demo.png" width="100%" 
+                                         sizes="(max-width: 2100px) 100vw, 2100px" alt="">
+                            </p>
+
+                            <p>
                             In theory, it should be easy to handle these failures automatically because both Stripe and Postgres provide strong semantics: the Stripe API is idempotent and Postgres is transactional.
                             In practice though, developers have to write custom retry and recovery logic themselves for each application, which is difficult and gets more difficult as applications get more complex.
                             </p>
