@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>DBOS: A Database-Oriented Operating System</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+
+   <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../images/dbos.ico" >
+
+</head>
+
+<body id="top">
+
+
+    <!-- content
+    ================================================== -->
+    <section class="s-content">
+
+        <div class="row">
+            <div class="column large-12">
+
+                <article class="s-content__entry format-standard">
+
+                    <div class="s-content__entry-header">
+                        <h1 class="s-content__title s-content__title--post">Your Infrastructure Should Know More About Your Database
+                    </div> <!-- end s-content__entry-header -->
+
+                    <div class="s-content__primary">
+
+                        <div class="s-content__entry-content">
+
+                            <p>
+                            Databases are becoming more and more important to modern applications.
+                            In particular, we've observed that many applications, especially cloud-hosted web services and microservices, have essentially no local persistent state and instead store <i>everything</i> in a database or in multiple data stores.
+                            As database researchers, this seems to us like a big opportunity.
+                            Modern cloud-hosted databases, from RDS to Aurora to CockroachDB, are incredibly powerful tools, offering incredible reliabilility, high availability, and transactional semantics.
+                            We think that using these properties, it should be easy to build database-backed applications that are reliable, highly available, and observable.
+                            </p>
+
+                            <p>
+                            Right now, though, it isn't.
+                            We think that a big part of why is that <i>infrastructure doesn't know about the database</i>.
+                            In other words, there's an impedance mismatch between modern applications, which store all their state in these wonderful data stores, and deployment infrastructure like Kubernetes, Fargate, or Lambda, which treat the application as a black box, are agnostic to database semantics, and punt responsibility for managing application state to the developer.
+                            This mismatch is most severe in two areas: reliability and data governance/security.
+                            </p>
+
+                            <p>
+                            In terms of reliability, the problem is that developers have to do the hard work of keeping application state consistent.
+                            Many applications access multiple data stores and additionally have side effects in external APIs.
+                            For example, a payment service might make a request to the Stripe API, then record the result in Postgres.
+                            In such cases, reliability is really a consistency problem: we must make sure that the Stripe API call completes, and that its result is always recorded in Postgres.
+                            To do this, as we show below, we have to appropriately handle many different types of failure: the application could fail, a database call could fail, or a Stripe API call could fail.
+                            In theory, it should be easy to handle these failures automatically because both Stripe and Postgres provide strong semantics: the Stripe API is idempotent and Postgres is transactional.
+                            In practice though, developers have to write custom retry and recovery logic themselves for each application, which is difficult and gets more difficult as applications get more complex.
+                            </p>
+
+                            <p>
+                            In terms of governance and security, the problem is that it's hard to track who does what to application state and data.
+                            This has become especially important over the last few years.
+                            Laws like GDPR and CCPA impose strict requirements on what applications can do with data, for example requiring that personally identifiable information only be used for well-defined purposes or that it is only stored in data centers physically located in certain countries.
+                            Regular data breaches remind us how important but hard it is to keep customer data safe.
+                            In theory, database-aware infrastructure could help with these issues, using knowledge of application and database semantics to enforce data usage rules and alert a security team in case of unusual data accesses.
+                            In practice, though, developers must solve these problems themselves.
+                            </p>
+
+                            <p>
+                            As part of the DBOS project at Stanford and MIT, we've been researching what it would mean to build systems and infrastructure that's aware of the database.
+                            We've built or are building systems such as a database-oriented function-as-a-service platform, a new cross-data store transactions protocol, and a transaction-oriented debugger.
+                            The reason we're writing this blog post is because we want to learn from you, developers who encounter these problems in the real world, about where to go next.  We want to know:
+                            </p>
+
+                            <ul>
+                                <li>How true are our hypotheses?  Are most of your applications database-oriented?</li>
+                                <li>Are the problems we're describing real?  Are they important?</li>
+                                <li>How do you currently solve these problems?  How hard are these solutions to implement?  Can they solve everything?</li>
+                                <li>What are we missing?</li>
+                            </ul>
+
+                            If this sounds interesting to you and you'd like to tell us your thoughts or chat, please reach out to both of us at {kraftp, qianli} [at] cs.stanford.edu.  Thanks!
+
+                        </div> <!-- end s-entry__entry-content -->
+
+
+                        <div class="s-content__entry-meta">
+
+                            <div class="entry-author meta-blk">
+                                <div class="author-avatar">
+                                    <a href="https://petereliaskraft.net" target="_blank"><img class="avatar" src="../images/PK_headshot.jpg" alt=""></a>
+                                </div>
+                                <div class="author-avatar">
+                                    <a href="https://cs.stanford.edu/people/qianli/" target="_blank"><img class="avatar" src="../images/qian.jpg" alt=""></a>
+                                </div>
+                                <div class="byline">
+                                    <span>By</span>
+                                    <a href="https://petereliaskraft.net" target="_blank">Peter Kraft</a>
+                                    and
+                                    <a href="https://cs.stanford.edu/people/qianli/" target="_blank">Qian Li</a>
+                                </div>
+                            </div>
+
+                            <div class="meta-bottom">
+                                
+                                <div class="entry-cat-links meta-blk">
+
+                                    <span>On</span>
+                                    December 6, 2022
+                                </div>
+
+                            </div>
+
+                        </div> <!-- s-content__entry-meta -->
+
+                    </div> <!-- end s-content__primary -->
+                </article> <!-- end entry -->
+
+            </div> <!-- end column -->
+        </div> <!-- end row -->
+    </section> <!-- end s-content -->
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="column">
+                    <div class="ss-copyright">
+                        <span>By <a href="https://petereliaskraft.net" target="_blank">Peter Kraft</a> and <a href="https://cs.stanford.edu/people/qianli/" target="_blank">Qian Li</a></span> 
+                        <span>Design by <a href="https://www.styleshout.com/" target="_blank">StyleShout</a></span>
+                    </div> <!-- end ss-copyright -->
+                </div>
+            </div> 
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+        </div> <!-- end s-footer__bottom -->
+
+   </footer> <!-- end s-footer -->
+</body>
+
+</html>
