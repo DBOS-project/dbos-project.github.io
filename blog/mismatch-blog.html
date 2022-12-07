@@ -63,7 +63,7 @@
                             <p>
                             In terms of reliability, the problem is that developers have to do the hard work of keeping application state consistent.
                             Many applications access multiple data stores and additionally have side effects in external APIs.
-                            For example, a payment service might make a request to the <a href="https://stripe.com/docs/api">Stripe API</a>, then record the result in <a href="https://www.postgresql.org/">Postgres</a>.
+                            For example, a (simplified) payment service might make a request to the <a href="https://stripe.com/docs/api">Stripe API</a>, then record the result in <a href="https://www.postgresql.org/">Postgres</a>.
                             For such applications, reliability is really a consistency problem: we must guarantee that the Stripe API call completes and that its result is recorded in Postgres.
                             To do this, as shown below, we have to handle many different types of failure: the application could fail, a database call could fail, or a Stripe API call could fail.
                             </p>
@@ -82,7 +82,7 @@
                             <p>
                             In terms of governance and security, the problem is that it's hard to track who does what to application state and data.
                             This has become especially important over the last few years.
-                            Laws like <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a> and <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act">CCPA</a> impose strict requirements on what applications can do with data, for example requiring that personally identifiable information is only used for well-defined purposes or is only stored in data centers physically located in certain countries.
+                            Laws like <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a> and <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act">CCPA</a> impose strict requirements on what applications can do with data, for example requiring that <a href="https://gdpr.eu/eu-gdpr-personal-data/">personally identifiable information</a> is only used for well-defined purposes or is only stored in data centers physically located in certain countries.
                             In theory, if the application stores all its data in the database, then the database should be able to enforce these requirements automatically.
                             In practice, though, cloud infrastructure doesn't support this and developers have to write custom complex data observability layers that change with each new standard.
                             </p>
