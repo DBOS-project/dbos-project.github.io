@@ -47,17 +47,17 @@
 
                             <p>
                             It's hard to overstate how important databases are to modern applications.
-                            In particular, we're observing that more and more applications, especially cloud-hosted web service and microservice backends, have little local persistent state and instead store <i>everything</i> in a database or in multiple data stores.
+                            In particular, we're observing that more and more applications, especially cloud-hosted web service and microservice backends, have little local persistent state and instead store <i>everything</i> in one or more databases or remote data stores.
                             As database researchers, this seems like a big opportunity.
                             Modern cloud-hosted databases, from <a href="https://aws.amazon.com/rds/aurora/">Aurora</a> to <a href="https://cloud.google.com/alloydb">AlloyDB</a> to <a href="https://www.cockroachlabs.com/">CockroachDB</a>, are incredibly powerful tools, offering great reliabilility, high availability, and strong transactional semantics.
-                            We think that using these properties, it should be easy to build database-backed applications that are reliable, highly available, and observable.
+                            We believe that using these properties, it should be easy to build database-backed applications that are reliable, highly available, and observable.
                             </p>
 
                             <p>
                             Right now, though, it isn't.
-                            We think that a big part of why is that <i>infrastructure doesn't know about the database</i>.
-                            In other words, there's an impedance mismatch between modern applications, which store all their state in these wonderful data stores, and deployment infrastructure like <a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://aws.amazon.com/fargate/">Fargate</a>, or <a href="https://aws.amazon.com/lambda/">Lambda</a>, which treat the application as a black box, are agnostic to database semantics, and punt responsibility for managing application state to the developer.
-                            This mismatch is most severe in two areas: reliability and data governance/security.
+                            We think the big issue is that <i>infrastructure doesn't know about the database</i>.
+                            In other words, there's a missing level of abstraction between how developers write applications, using frameworks like <a href="https://grpc.io/">gRPC</a> or <a href="https://spring.io/projects/spring-boot">Spring Boot</a> and storing state in data stores, and how they deploy applications, using infrastructure like <a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://aws.amazon.com/fargate/">Fargate</a>, or <a href="https://aws.amazon.com/lambda/">Lambda</a> which treats the application as a black box and is agnostic to database semantics.
+                            This mismatch places the <i>entire</i> burden of managing application state on the developer, causing pain that is especially severe in two areas: reliability and data governance/security.
                             </p>
 
                             <p>
@@ -76,7 +76,7 @@
                             <p>
                             In theory, it should be easy to handle these failures automatically because both Stripe and Postgres provide strong semantics: the Stripe API is <a href="https://stripe.com/docs/api/idempotent_requests">idempotent</a> and Postgres is transactional.
                             In practice though, developers have to write custom retry and recovery logic for each application, which is difficult and gets more difficult as applications get more complex.
-                            We've heard that many teams essentially have to build their own distributed fault-tolerant state machines, which shouldn't be (but currently is) necessary for a simple payment processing application.
+                            We've heard that many teams essentially have to build their own distributed fault-tolerant state machines on top of <a href="https://kafka.apache.org/">Kafka</a> or <a href="https://aws.amazon.com/sqs/">SQS</a>, which shouldn't be (but currently is) necessary for a simple payment processing application.
                             </p>
 
                             <p>
@@ -90,7 +90,7 @@
                             <p>
                             As part of the <a href="https://dbos-project.github.io/">DBOS project</a> at Stanford and MIT, we've been researching what it would mean to build systems and infrastructure that's aware of the database.
                             We've built or are building systems such as a database-oriented function-as-a-service platform (Apiary: <a href="https://arxiv.org/abs/2208.13068">arXiv</a>, <a href="https://github.com/DBOS-project/apiary">GitHub</a>), a new cross-data store transactions protocol, and a transaction-oriented debugger (CIDR '23).
-                            Based on our research, we think it's possible to build infrastructure where:
+                            Based on our research, we think it's possible to build new abstractions between the application framework and deployment infrastructure so that:
 
                             <ul>
                                 <li>Reliability is easy.  You can make a request or call a function with an automatic infrastructure-backed guarantee that any side effects it has on state (whether in a data store or in external APIs, though the latter may need to be annotated) happen <i>exactly-once</i>.</li>
@@ -101,7 +101,7 @@
                             </p>
 
                             <ul>
-                                <li>How true are our hypotheses?  Do your applications store all (or almost all) their persistent state in a database or data stores?</li>
+                                <li>How true are our hypotheses?  Do your applications store all (or almost all) their persistent state in one or more databases or data stores?</li>
                                 <li>Are the problems we're describing real?  Are they important?</li>
                                 <li>How do you currently solve these problems?  How hard are these solutions to implement?  What problems can't you solve?</li>
                                 <li>What are we missing?</li>
