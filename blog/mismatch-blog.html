@@ -82,28 +82,30 @@
                             <p>
                             In terms of governance and security, the problem is that it's hard to track who does what to application state and data.
                             This has become especially important over the last few years.
-                            Laws like <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a> and <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act">CCPA</a> impose strict requirements on what applications can do with data, for example requiring that <a href="https://gdpr.eu/eu-gdpr-personal-data/">personally identifiable information</a> is only used for well-defined purposes or is only stored in data centers physically located in certain countries.
-                            In theory, if the application stores all its data in the database, then the database should be able to enforce these requirements automatically.
-                            In practice, though, cloud infrastructure doesn't support this and developers have to write custom complex data observability layers that change with each new standard.
+                            Laws like <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a> and <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act">CCPA</a> impose strict requirements on what applications can do with data, for example requiring that <a href="https://gdpr.eu/eu-gdpr-personal-data/">personally identifiable information (PII)</a> is only used for well-defined purposes or is only stored in data centers physically located in certain countries.
+                            In our earlier payment service example, regulation might say that recorded payment information can only be used in the payment service and cannot be collcted for, say, marketing purposes.
+                            In theory, if the application stores all its data in the database and PII and purposes are annotated, then the application infrastructure should be able to enforce these requirements automatically.
+                            In practice, though, most infrastructure does not support this and developers have to write custom complex data observability layers that change with each new standard.
                             </p>
 
                             <p>
-                            As part of the <a href="https://dbos-project.github.io/">DBOS project</a> at Stanford and MIT, we've been researching what it would mean to build systems and infrastructure that's aware of the database.
+                            As part of the <a href="https://dbos-project.github.io/">DBOS project</a> at Stanford and MIT, we've been researching how to build systems and infrastructure that are more aware of the database.
                             We've built or are building systems such as a database-oriented function-as-a-service platform (Apiary: <a href="https://arxiv.org/abs/2208.13068">arXiv</a>, <a href="https://github.com/DBOS-project/apiary">GitHub</a>), a new cross-data store transactions protocol, and a transaction-oriented debugger (CIDR '23).
-                            Based on our research, we think it's possible to build new abstractions between the application framework and deployment infrastructure so that:
+                            The reason we're writing this blog post is because we want to learn from you, developers who encounter these problems in the real world, about where to go next. 
+                            Based on our research, we think it's possible to build new abstractions between applications and deployment infrastructure so that:
 
                             <ul>
                                 <li>Reliability is easy.  You can make a request or call a function with an automatic infrastructure-backed guarantee that any side effects it has on state (whether in a data store or in external APIs, though the latter may need to be annotated) happen <i>exactly-once</i>.</li>
                                 <li>Data governance and security are built-in. The infrastructure automatically tracks the <i>provenance</i> of each data item&mdash;which operations read from and wrote to it&mdash;and makes this information easily accessible for observability, regulatory compliance, and security analysis.</li>
                             </ul>
 
-                            The reason we're writing this blog post is because we want to learn from you, developers who encounter these problems in the real world, about where to go next.  We want to know:
+                            To help us figure out how to build this infrastructure, we want to learn:
                             </p>
 
                             <ul>
                                 <li>How true are our hypotheses?  Do your applications store all (or almost all) their persistent state in one or more databases or data stores?</li>
-                                <li>Are the problems we're describing real?  Are they important?</li>
-                                <li>How do you currently solve these problems?  How hard are these solutions to implement?  What problems can't you solve?</li>
+                                <li>Are the problems we're describing serious?  How much time do you spend on issues related to data consistency and application reliability?  What about data governance and security?</li>
+                                <li>How do you currently solve these problems?  How hard are these solutions to implement?  What problems are especially hard to solve?</li>
                                 <li>What are we missing?</li>
                             </ul>
 
