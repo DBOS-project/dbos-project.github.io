@@ -15,6 +15,7 @@ The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, V
 - Septermber 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
 
 ## Publications
+- [Transactions Make Debugging Easy](res/debugger_cidr23.pdf) (CIDR 2023)
 - [Apiary: A DBMS-Backed Transactional Function-as-a-Service Framework
 ](https://arxiv.org/abs/2208.13068) (arXiv preprint)
 - [Machine Learning with DBOS](http://arxiv.org/abs/2208.05101) (AIDB@VLDB 2022)
@@ -33,6 +34,7 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 - [Michael Cafarella](https://www.csail.mit.edu/person/michael-cafarella) (MIT)
 - [Michael Coden](https://www.bcg.com/about/people/experts/michael-coden) (BCG)
 - [Çağatay Demiralp](http://hci.stanford.edu/~cagatay/) (Sigma Computing)
+- [Deeptaanshu Kumar](https://www.deeptaanshu.com) (The Arena Group)
 - [Goetz Graefe](https://research.google/people/105119/) (Google)
 - [Jeremy Kepner](http://www.mit.edu/~kepner/) (MIT)
 - [Christos Kozyrakis](https://web.stanford.edu/~kozyraki/) (Stanford)
@@ -49,10 +51,6 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 - [Peter Baile Chen](https://peterbaile.github.io/) (MIT)
 - [Anthony Xingchi Li](https://xingchi.li) (Texas A&M)
 
-#### Masters and Undergraduate Students
-- [Deeptaanshu Kumar](https://www.deeptaanshu.com) (CMU)
-- [Jason Li](?) (MIT)
-
 #### Alumni
 - [Kostis Kaffes](http://stanford.edu/~kkaffes/) (Stanford)
 - [Danny Cho](?) (Stanford)
@@ -61,6 +59,7 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 - [Brian Xia](?) (MIT)
 - [Daniel Hong](?) (MIT)
 - [Shana Mathew](?) (MIT)
+- [Jason Li](?) (MIT)
 
 ## Sponsors
 - [Google](https://research.google/)
