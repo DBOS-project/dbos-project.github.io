@@ -12,7 +12,8 @@ We are currently working on building a complete end-to-end prototype of DBOS.
 The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, BCG, and Sigma Computing.
 
 ## Blog Posts
-- Septermber 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
+- December 9th, 2022 - [Your Infrastructure Should Know More About Your Database](blog/mismatch-blog.html)
+- September 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
 
 ## Publications
 - [Transactions Make Debugging Easy](res/debugger_cidr23.pdf) (CIDR 2023)
