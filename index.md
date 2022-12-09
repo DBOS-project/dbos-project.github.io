@@ -1,15 +1,6 @@
 <head>
 	 <link rel="shortcut icon" type="image/x-icon" href="images/dbos.ico">
 </head>
-The goal of DBOS--the DBMS-oriented Operating System--is to build a completely new operating system (OS) stack for distributed systems.
-Currently, distributed systems are built on many instances of a single-node OS like Linux with entirely separate cluster schedulers, distributed file systems, and network managers.
-We argue that we should instead use a distributed transactional DBMS as the basis for a scalable cluster OS.
-We have shown that such a database OS can do scheduling, file management, and inter-process communication with competitive performance to existing systems. 
-It can additionally provide significantly better analytics and dramatically reduce code complexity by building core OS services from standard database queries,
-while implementing low-latency transactions and high availability only once.
-We are currently working on building a complete end-to-end prototype of DBOS.
-
-The DBOS project includes members from MIT, Stanford, CMU, UW-Madison, Google, VMware, BCG, and Sigma Computing.
 
 ## Blog Posts
 - December 9th, 2022 - [Your Infrastructure Should Know More About Your Database](blog/mismatch-blog.html)
