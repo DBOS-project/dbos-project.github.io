@@ -7,7 +7,8 @@
 - September 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
 
 ## Publications
-- [Transactions Make Debugging Easy](res/debugger_cidr23.pdf) (CIDR 2023)
+- [Transactions Make Debugging Easy](https://www.cidrdb.org/cidr2023/papers/p26-li.pdf) (CIDR 2023)
+- [Two is Better Than One: The Case for 2-Tree for Skewed Data Sets](https://www.cidrdb.org/cidr2023/papers/p57-zhou.pdf) (CIDR 2023)
 - [Apiary: A DBMS-Backed Transactional Function-as-a-Service Framework
 ](https://arxiv.org/abs/2208.13068) (arXiv preprint)
 - [Machine Learning with DBOS](http://arxiv.org/abs/2208.05101) (AIDB@VLDB 2022)
