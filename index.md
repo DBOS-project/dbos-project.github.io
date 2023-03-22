@@ -25,7 +25,7 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 
 #### Faculty and Senior Industry Partners
 - [Michael Cafarella](https://www.csail.mit.edu/person/michael-cafarella) (MIT)
-- [Michael Coden](https://www.bcg.com/about/people/experts/michael-coden) (BCG)
+- [Michael Coden](https://www.linkedin.com/in/michael-coden-cyber/) (MIT)
 - [Çağatay Demiralp](http://hci.stanford.edu/~cagatay/) (Sigma Computing)
 - [Deeptaanshu Kumar](https://www.deeptaanshu.com) (The Arena Group)
 - [Goetz Graefe](https://research.google/people/105119/) (Google)
