@@ -21,8 +21,8 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 - [TabulaROSA: Tabular Operating System Architecture for Massively Parallel Heterogeneous Compute Engines](https://ieeexplore.ieee.org/document/8547577) (HPEC 2018)
 
 ## Open-source Code
-- [Apiary: Transactional functions-as-a-service framework](https://github.com/DBOS-project/apiary)
-- [Lotus: Scalable multi-partition transactions](https://github.com/DBOS-project/lotus)
+- [Apiary: A Transactional Functions-as-a-Service Framework](https://github.com/DBOS-project/apiary)
+- [Lotus: Scalable Multi-Partition Transactions](https://github.com/DBOS-project/lotus)
 
 ## People
 
