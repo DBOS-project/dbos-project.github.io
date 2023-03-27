@@ -8,7 +8,6 @@
 
 ## Open-source Code
 - [Apiary: Transactional functions-as-a-service framework](https://github.com/DBOS-project/apiary)
-	- [Apiary tutorial and demo](https://github.com/DBOS-project/apiary/tree/main/postgres-demo)
 - [Lotus: Scalable multi-partition transactions](https://github.com/DBOS-project/lotus)
 
 ## Publications
