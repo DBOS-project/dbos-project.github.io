@@ -3,10 +3,13 @@
 </head>
 
 ## Blog Posts
+- August 28th, 2023 - [The Time Traveler's Guide to Distributed Applications](https://qianli.dev/blog/timetravel)
 - December 9th, 2022 - [Your Infrastructure Should Know More About Your Database](blog/mismatch-blog.html)
 - September 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
 
 ## Publications
+- [R<sup>3</sup>: Record-Replay-Retroaction for Database-Backed Applications](https://www.vldb.org/pvldb/vol16/p3085-li.pdf) (VLDB 2023)
+- [Epoxy: ACID Transactions Across Diverse Data Stores](https://www.vldb.org/pvldb/vol16/p2742-kraft.pdf) (VLDB 2023)
 - [Transactions Make Debugging Easy](https://www.cidrdb.org/cidr2023/papers/p26-li.pdf) (CIDR 2023)
 - [Two is Better Than One: The Case for 2-Tree for Skewed Data Sets](https://www.cidrdb.org/cidr2023/papers/p57-zhou.pdf) (CIDR 2023)
 - [Apiary: A DBMS-Backed Transactional Function-as-a-Service Framework
