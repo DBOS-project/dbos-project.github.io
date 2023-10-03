@@ -3,6 +3,7 @@
 </head>
 
 ## Blog Posts
+- August 30th, 2023 - [How to Get Transactions Between (Almost) Any Data Stores](https://petereliaskraft.net/blog/epoxy) 
 - August 28th, 2023 - [The Time Traveler's Guide to Distributed Applications](https://qianli.dev/blog/timetravel)
 - December 9th, 2022 - [Your Infrastructure Should Know More About Your Database](blog/mismatch-blog.html)
 - September 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
