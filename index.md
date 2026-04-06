@@ -11,8 +11,11 @@
 - September 3rd, 2022 - [DBOS: A Database-Oriented Operating System](blog/intro-blog.html)
 
 ## Publications
+- [TUX: Efficient Drop-in Networking for Database Systems](https://dl.acm.org/doi/abs/10.14778/3778092.3778096) (VLDB 2026)
 - [Consistency and Correctness in Data-Oriented Workflow Systems](https://www.vldb.org/cidrdb/papers/2026/p9-stonebraker.pdf) (CIDR 2026)
 - [Practical DB-OS Co-Design with Privileged Kernel Bypass](https://dl.acm.org/doi/10.1145/3709714) (SIGMOD 2025)
+- [OLTP Through the Looking Glass 16 Years Later: Communication is the New Bottleneck](https://vldb.org/cidrdb/papers/2025/p17-zhou.pdf)  (CIDR 2025)
+- [DBOS: three years later](https://link.springer.com/article/10.1007/s00778-024-00899-0) (VLDBJ 2025)
 - [R^3: Record-Replay-Retroaction for Database-Backed Applications](https://www.vldb.org/pvldb/vol16/p3085-li.pdf) (VLDB 2023)
 - [Epoxy: ACID Transactions Across Diverse Data Stores](https://www.vldb.org/pvldb/vol16/p2742-kraft.pdf) (VLDB 2023)
 - [Transactions Make Debugging Easy](https://www.cidrdb.org/cidr2023/papers/p26-li.pdf) (CIDR 2023)
