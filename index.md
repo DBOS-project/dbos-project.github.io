@@ -12,6 +12,7 @@
 
 ## Publications
 - [Consistency and Correctness in Data-Oriented Workflow Systems](https://www.vldb.org/cidrdb/papers/2026/p9-stonebraker.pdf) (CIDR 2026)
+- [Practical DB-OS Co-Design with Privileged Kernel Bypass](https://dl.acm.org/doi/10.1145/3709714) (SIGMOD 2025)
 - [R^3: Record-Replay-Retroaction for Database-Backed Applications](https://www.vldb.org/pvldb/vol16/p3085-li.pdf) (VLDB 2023)
 - [Epoxy: ACID Transactions Across Diverse Data Stores](https://www.vldb.org/pvldb/vol16/p2742-kraft.pdf) (VLDB 2023)
 - [Transactions Make Debugging Easy](https://www.cidrdb.org/cidr2023/papers/p26-li.pdf) (CIDR 2023)
@@ -29,6 +30,7 @@ Partitioned Databases](https://www.vldb.org/pvldb/vol15/p2939-zhou.pdf) (VLDB 20
 
 ## Open-source Code
 - [Consistency and Correctness in Data-Oriented Workflow Systems](https://github.com/DBOS-project/dbos-transact-py)
+- [Practical DB-OS Co-Design with Privileged Kernel Bypass](https://github.com/zxjcarrot/libdbos) (SIGMOD 2025)
 - [Apiary: A Transactional Functions-as-a-Service Framework](https://github.com/DBOS-project/apiary)
 - [Lotus: Scalable Multi-Partition Transactions](https://github.com/DBOS-project/lotus)
 
